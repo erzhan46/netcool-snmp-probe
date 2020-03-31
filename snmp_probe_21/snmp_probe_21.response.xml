@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<agent-input>
+  <variables>
+    <variable name='sharedLocation' value='/opt/IBM/IBMIMShared'/>
+  </variables>
+  <server>
+    <repository location='/home/netcool/snmp_probe_21'/>
+  </server>
+  <profile id='IBM Netcool Core Components' installLocation='/opt/IBM/tivoli/netcool'>
+    <data key='cic.selector.arch' value='x86_64'/>
+    <data key='user.migratedata,com.ibm.tivoli.omnibus.core' value='false'/>
+    <data key='user.silentInstall' value='true'/>
+  </profile>
+  <install>
+    <!-- Netcool/OMNIbus Probe nco-p-mttrapd 1.21.0.0 -->
+    <offering profile='IBM Netcool Core Components' id='com.ibm.tivoli.omnibus.integrations.nco-p-mttrapd' version='1.21.0.5' features='nco-p-mttrapd'/>
+  </install>
+  <preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='${sharedLocation}'/>
+</agent-input>

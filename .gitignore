@@ -1,0 +1,7 @@
+# Ignore zip and tar files
+
+*.zip
+*.tar
+*.tar.gz
+.DS_Store
+
