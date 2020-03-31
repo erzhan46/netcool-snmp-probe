@@ -15,7 +15,8 @@ ADD --chown=netcool:ncoadmin snmp_probe_21 /home/netcool/snmp_probe_21
 RUN cd /home/netcool/snmp_probe_21 \
     && unzip -q omnbus-pb-nco-mttr*.zip \
     && cd /home/netcool/IBM/InstallationManager/eclipse/tools \
-    && ./imcl -s -input /home/netcool/snmp_probe_21/snmp_probe_21.response.xml -acceptLicense
+    && ./imcl -s -input /home/netcool/snmp_probe_21/snmp_probe_21.response.xml -acceptLicense \
+    && ./imcl -s -input /home/netcool/snmp_probe_21/reset_repos.xml
 
 
 WORKDIR /home/netcool
